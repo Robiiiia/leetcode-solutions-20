@@ -1,0 +1,23 @@
+excel sheet column number
+
+class Solution {
+
+    public int titleToNumber(String columnTitle) { // Метод принимает название столбца и возвращает его номер
+
+        int result = 0; // Переменная для хранения итогового номера столбца; сначала он равен 0
+
+        for (int i = 0; i < columnTitle.length(); i++) { // Перебираем все символы строки слева направо
+
+            char letter = columnTitle.charAt(i); // Получаем букву, находящуюся на позиции i
+
+            int value = letter - 'A' + 1; // Преобразуем букву в число: A = 1, B = 2, ..., Z = 26
+
+            result = result * 26 + value; // Учитываем предыдущие буквы и добавляем значение текущей
+
+        } // Конец цикла for
+
+        return result; // Возвращаем вычисленный номер столбца
+
+    } 
+
+} 
